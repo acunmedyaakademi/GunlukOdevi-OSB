@@ -1,0 +1,14 @@
+C:\Users\omerk\source\repos\EncryptedDiaryApp\EncryptedDiaryApp\bin\Debug\net8.0\EncryptedDiaryApp.exe
+C:\Users\omerk\source\repos\EncryptedDiaryApp\EncryptedDiaryApp\bin\Debug\net8.0\EncryptedDiaryApp.deps.json
+C:\Users\omerk\source\repos\EncryptedDiaryApp\EncryptedDiaryApp\bin\Debug\net8.0\EncryptedDiaryApp.runtimeconfig.json
+C:\Users\omerk\source\repos\EncryptedDiaryApp\EncryptedDiaryApp\bin\Debug\net8.0\EncryptedDiaryApp.dll
+C:\Users\omerk\source\repos\EncryptedDiaryApp\EncryptedDiaryApp\bin\Debug\net8.0\EncryptedDiaryApp.pdb
+C:\Users\omerk\source\repos\EncryptedDiaryApp\EncryptedDiaryApp\obj\Debug\net8.0\EncryptedDiaryApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\omerk\source\repos\EncryptedDiaryApp\EncryptedDiaryApp\obj\Debug\net8.0\EncryptedDiaryApp.AssemblyInfoInputs.cache
+C:\Users\omerk\source\repos\EncryptedDiaryApp\EncryptedDiaryApp\obj\Debug\net8.0\EncryptedDiaryApp.AssemblyInfo.cs
+C:\Users\omerk\source\repos\EncryptedDiaryApp\EncryptedDiaryApp\obj\Debug\net8.0\EncryptedDiaryApp.csproj.CoreCompileInputs.cache
+C:\Users\omerk\source\repos\EncryptedDiaryApp\EncryptedDiaryApp\obj\Debug\net8.0\EncryptedDiaryApp.dll
+C:\Users\omerk\source\repos\EncryptedDiaryApp\EncryptedDiaryApp\obj\Debug\net8.0\refint\EncryptedDiaryApp.dll
+C:\Users\omerk\source\repos\EncryptedDiaryApp\EncryptedDiaryApp\obj\Debug\net8.0\EncryptedDiaryApp.pdb
+C:\Users\omerk\source\repos\EncryptedDiaryApp\EncryptedDiaryApp\obj\Debug\net8.0\EncryptedDiaryApp.genruntimeconfig.cache
+C:\Users\omerk\source\repos\EncryptedDiaryApp\EncryptedDiaryApp\obj\Debug\net8.0\ref\EncryptedDiaryApp.dll
