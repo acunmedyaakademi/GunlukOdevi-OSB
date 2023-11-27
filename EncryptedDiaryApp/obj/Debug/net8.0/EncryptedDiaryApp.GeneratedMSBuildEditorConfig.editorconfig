@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = EncryptedDiaryApp
-build_property.ProjectDir = C:\Users\omerk\Desktop\versiyon2\EncryptedDiaryApp\
+build_property.ProjectDir = C:\Users\omerk\Desktop\versiyon2.2\EncryptedDiaryApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

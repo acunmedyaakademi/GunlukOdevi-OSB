@@ -23,10 +23,10 @@ internal class Program
             switch (choice.Key)
             {
                 case ConsoleKey.D1:
-                        AddNewDocument(path);
+                    AddNewDocument(path);
                     break;
                 case ConsoleKey.D2:
-                    DocumentList(path); 
+                    DocumentList(path);
                     break;
                 case ConsoleKey.D3:
                     DeleteAllDocuments(path);
@@ -66,38 +66,40 @@ internal class Program
     {
         if (File.Exists(path))
         {
-            Console.WriteLine("Günlük Kayıtlar:\n");
+            if (dairyDocuments.Count > 0)
+            {
+                foreach (var document in dairyDocuments)
+                {
+                    Console.WriteLine($"{dairyDocuments[dairyDocuments.Count - 1]}\n-------------");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Herhangi bir kayıt bulunamadı.");
+            }
 
-             string[] documents = File.ReadAllLines(path);
-
-             Console.WriteLine(documents[dairyDocuments.Count - 1]);
-         }
-        else 
-        {
-            Console.WriteLine("Herhangi bir kayıt bulunamadı."); 
+            Console.ReadLine();
         }
-        
-        Console.ReadLine() ;
-    }   
+    }
+
 
         static void DeleteAllDocuments(string path)
-    {
-        Console.WriteLine("Tüm kayıtları silmek istediğinize emin misiniz? (E/H)");
-
-        if (Console.ReadLine().ToUpper() == "E")
         {
+            Console.WriteLine("Tüm kayıtları silmek istediğinize emin misiniz? (E/H)");
 
-            File.Delete(path);
-            Console.WriteLine("Tüm kayıtlar silindi.");
-            lastDocumentDate = DateTime.MinValue;
-        }
-        else
-        {
-            Console.WriteLine("İşlem iptal edildi.");
-        }
+            if (Console.ReadLine().ToUpper() == "E")
+            {
 
-        Console.ReadLine();
-    }
+                File.Delete(path);
+                Console.WriteLine("Tüm kayıtlar silindi.");
+                lastDocumentDate = DateTime.MinValue;
+            }
+            else
+            {
+                Console.WriteLine("İşlem iptal edildi.");
+            }
+
+            Console.ReadLine();
+        }
 }
-
     

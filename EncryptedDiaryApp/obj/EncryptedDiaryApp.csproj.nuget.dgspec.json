@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\omerk\\Desktop\\versiyon2\\EncryptedDiaryApp\\EncryptedDiaryApp.csproj": {}
+    "C:\\Users\\omerk\\source\\repos\\GunlukOdevi-OSB\\EncryptedDiaryApp\\EncryptedDiaryApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\omerk\\Desktop\\versiyon2\\EncryptedDiaryApp\\EncryptedDiaryApp.csproj": {
+    "C:\\Users\\omerk\\source\\repos\\GunlukOdevi-OSB\\EncryptedDiaryApp\\EncryptedDiaryApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\omerk\\Desktop\\versiyon2\\EncryptedDiaryApp\\EncryptedDiaryApp.csproj",
+        "projectUniqueName": "C:\\Users\\omerk\\source\\repos\\GunlukOdevi-OSB\\EncryptedDiaryApp\\EncryptedDiaryApp.csproj",
         "projectName": "EncryptedDiaryApp",
-        "projectPath": "C:\\Users\\omerk\\Desktop\\versiyon2\\EncryptedDiaryApp\\EncryptedDiaryApp.csproj",
+        "projectPath": "C:\\Users\\omerk\\source\\repos\\GunlukOdevi-OSB\\EncryptedDiaryApp\\EncryptedDiaryApp.csproj",
         "packagesPath": "C:\\Users\\omerk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\omerk\\Desktop\\versiyon2\\EncryptedDiaryApp\\obj\\",
+        "outputPath": "C:\\Users\\omerk\\source\\repos\\GunlukOdevi-OSB\\EncryptedDiaryApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\omerk\\AppData\\Roaming\\NuGet\\NuGet.Config",
