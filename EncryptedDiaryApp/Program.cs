@@ -3,6 +3,7 @@
 internal class Program
 {
     static List<string> dairyDocuments { get; set; } = new List<string>();
+    static DateTime lastDocumentDate = DateTime.MinValue;
 
     const string path = "C:\\Proje\\Dairy.txt";
 
@@ -25,7 +26,7 @@ internal class Program
                     AddNewDocument(path);
                     break;
                 case ConsoleKey.D2:
-                    DocumentList(path); 
+                    DocumentList(path);
                     break;
                 case ConsoleKey.D3:
                     DeleteAllDocuments(path);
@@ -43,38 +44,46 @@ internal class Program
 
     static void AddNewDocument(string path)
     {
-        StreamWriter writer = new StreamWriter(path, true);
-        Console.WriteLine("Günlük kaydınızı ekleyin:");
-        string newDocument = $"{DateTime.Now}\n{Console.ReadLine()}";
-        dairyDocuments.Add(newDocument);
-        writer.WriteLine(newDocument);
-        writer.Close();
-        Console.WriteLine("Kayıt eklendi.");
+        if (DateTime.Now.Date != lastDocumentDate.Date)
+        {
+            StreamWriter writer = new StreamWriter(path, true);
+            Console.WriteLine("Günlük kaydınızı ekleyin:");
+            string newDocument = $"{DateTime.Now}\n{Console.ReadLine()}";
+            dairyDocuments.Add(newDocument);
+            writer.WriteLine(newDocument);
+            writer.Close();
+            lastDocumentDate = DateTime.Now;
+            Console.WriteLine("Kayıt eklendi.");
+        }
+        else
+        {
+            Console.WriteLine("Günlük kaydınız zaten mevcut olduğundan yeni kayıt eklenemez. Lütfen herhangi bir tuşa basarak ana menüye dönün");
+        }
         Console.ReadLine();
     }
 
     static void DocumentList(string path)
     {
-        if(File.Exists(path))
+        if (File.Exists(path))
         {
-            Console.WriteLine("Günlük Kayıtlar:\n");
-
-            string[] documents = File.ReadAllLines(path);
-
-            foreach (var document in documents)
+            if (dairyDocuments.Count > 0)
             {
-                Console.WriteLine(document);
+                foreach (var document in dairyDocuments)
+                {
+                    Console.WriteLine($"{dairyDocuments[dairyDocuments.Count - 1]}\n-------------");
+                }
             }
-        }
-        else 
-        {
-            Console.WriteLine("Herhangi bir kayıt bulunamadı."); 
-        }
-        
-        Console.ReadLine() ;
-    }   
+            else
+            {
+                Console.WriteLine("Herhangi bir kayıt bulunamadı.");
+            }
 
-        static void DeleteAllDocuments(string path)
+            Console.ReadLine();
+        }
+    }
+
+
+    static void DeleteAllDocuments(string path)
     {
         Console.WriteLine("Tüm kayıtları silmek istediğinize emin misiniz? (E/H)");
 
@@ -83,6 +92,7 @@ internal class Program
 
             File.Delete(path);
             Console.WriteLine("Tüm kayıtlar silindi.");
+            lastDocumentDate = DateTime.MinValue;
         }
         else
         {
@@ -92,5 +102,3 @@ internal class Program
         Console.ReadLine();
     }
 }
-
-    
