@@ -1,4 +1,4 @@
-﻿namespace EncryptedDiaryApp;
+namespace EncryptedDiaryApp;
 
 internal class Program
 {
@@ -78,14 +78,36 @@ internal class Program
                 Console.WriteLine("Herhangi bir kayıt bulunamadı.");
             }
 
-            Console.ReadLine();
-        }
+            Console.WriteLine("1. Kayıdı düzenle");
+            Console.WriteLine("2. Kaydı sil");
+            Console.WriteLine("3. Tüm kayıtları göster");
+            Console.WriteLine("4. Çıkış");
+
+            ConsoleKeyInfo choice = Console.ReadKey();
+                switch (choice.Key)
+                {
+                    case ConsoleKey.D1:
+                        AddNewDocumentList(path);
+                        break;
+                    case ConsoleKey.D2:
+                        DeleteAllDocuments(path);
+                        break;
+                    case ConsoleKey.D3:
+                        AllDocumentList(path);
+                        break;
+                    case ConsoleKey.D4:
+                        break;
+                    default:
+                        Console.WriteLine("Geçersiz seçenek. Lütfen tekrar deneyin.");
+                        break;
+                }
+                Console.ReadLine();
+            }
     }
 
-
-        static void DeleteAllDocuments(string path)
+    static void DeleteAllDocuments(string path)
         {
-            Console.WriteLine("Tüm kayıtları silmek istediğinize emin misiniz? (E/H)");
+            Console.WriteLine("Kaydı silmek istediğinize emin misiniz? (E/H)");
 
             if (Console.ReadLine().ToUpper() == "E")
             {
@@ -101,5 +123,36 @@ internal class Program
 
             Console.ReadLine();
         }
+    static void AllDocumentList(string path)
+    {
+        if (File.Exists(path))
+        {
+            Console.WriteLine("Tüm Günlük Kayıtlar:\n");
+
+            string[] documents = File.ReadAllLines(path);
+
+            foreach (var document in documents)
+            {
+                Console.WriteLine($"{document}\n-------------");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Herhangi bir kayıt bulunamadı.");
+        }
+
+        Console.ReadLine();
+    }
+    static void AddNewDocumentList(string path)
+    {
+        StreamWriter writer = new StreamWriter(path, true);
+        Console.WriteLine("Günlük kaydınızı düzenleyin:");
+        string newDocument = $"{DateTime.Now}\n{Console.ReadLine()}";
+        dairyDocuments.Add(newDocument);
+        writer.WriteLine(newDocument);
+        writer.Close();
+        Console.WriteLine("Kayıt düzenlendi.");
+        Console.ReadLine();
+    }
 }
     
